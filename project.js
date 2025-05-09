@@ -47,13 +47,17 @@ const projects = [
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-          <a href="${p.link}" target="_blank" class="card-link">
-            <img src="${p.image}" alt="${p.name}">
+            <a href="${p.link}" target="_blank" class="card-link">
+            <picture>
+            <source srcset="${p.image.replace(/\.jpg$/, '.webp')}" type="image/webp">
+            <img src="${p.image}" alt="${p.name}" loading="lazy">
+            </picture>
             <div class="card-content">
-              <div class="card-title">${p.name}</div>
-            </div>
-          </a>
-        `;
+            <div class="card-title">${p.name}</div>
+    </div>
+  </a>
+`;
+
         grid.appendChild(card);
       });
     }
