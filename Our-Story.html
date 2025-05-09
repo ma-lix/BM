@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story</title>
+  <link rel="icon" type="image/jpeg" href="images/BM logo.png"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+
+    html, body {
+      height: 100%;
+      background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+    .our-story {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+      animation: fadeInUp 1s ease-out;
+    }
+    ::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: crimson;
+}
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .story-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .story-text h1 {
+      font-size: 2.5rem;
+      color: #ee0979;
+      margin-bottom: 20px;
+    }
+
+    .story-text p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .wrapper {
+      flex: 1;
+      min-width: 320px;
+      position: relative;
+      height: 450px;
+    }
+
+    .outer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .card {
+      background: #fff;
+      width: 100%;
+      max-width: 430px;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      justify-content: space-between;
+      border-radius: 100px 20px 20px 100px;
+      box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+      animation: animate 15s linear infinite;
+      animation-delay: calc(3s * var(--delay));
+    }
+
+    .outer:hover .card {
+      animation-play-state: paused;
+    }
+
+    .card:last-child {
+      animation-delay: calc(-3s * var(--delay));
+    }
+
+    @keyframes animate {
+      0% {
+        opacity: 0;
+        transform: translateY(100%) scale(0.5);
+      }
+      5%, 20% {
+        opacity: 0.4;
+        transform: translateY(100%) scale(0.7);
+      }
+      25%, 40% {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0%) scale(1);
+      }
+      45%, 60% {
+        opacity: 0.4;
+        transform: translateY(-100%) scale(0.7);
+      }
+      65%, 100% {
+        opacity: 0;
+        transform: translateY(-100%) scale(0.5);
+      }
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+    }
+
+    .img {
+      height: 90px;
+      width: 90px;
+      position: absolute;
+      left: -5px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 5px;
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    }
+
+    .img img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .details {
+      margin-left: 80px;
+    }
+
+    .details span {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .card a {
+      text-decoration: none;
+      padding: 7px 18px;
+      border-radius: 25px;
+      color: #fff;
+      background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+      transition: all 0.3s ease;
+    }
+
+    .card a:hover {
+      transform: scale(0.94);
+    }
+
+    
+    .back-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+
+
+    .back-button button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      color: white;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-button button:hover {
+      box-shadow: 0 0 15px rgba(255, 106, 0, 0.6);
+      transform: scale(1.05);
+
+
+    }
+
+
+    .wrapper {
+  flex: 1;
+  min-width: 320px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .our-story {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .story-text h1 {
+        font-size: 2rem;
+      }
+
+      .story-text p {
+        font-size: 1rem;
+      }
+
+      .wrapper {
+        height: 400px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px;
+        padding-left: 100px;
+      }
+
+      .details {
+        margin-left: 100px;
+      }
+
+      .img {
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="our-story">
+    <div class="story-text">
+      <h1>Our Story</h1>
+      <p>
+        Founded with passion and driven by purpose, our journey began with a simple idea — to create something extraordinary.
+        What started as a vision quickly transformed into a mission to inspire, build, and innovate.
+      </p>
+      <p>
+        Our story is still being written — and we’re grateful to share it with you.
+      </p>
+    </div>
+
+    
+<div class="wrapper">
+      <div class="outer">
+        <div class="card" style="--delay:-1;">
+          <div class="content">
+            <div class="img"><img src="images/profile-1.jpeg" alt=""></div>
+            <div class="details">
+              <span class="name">Bilal Malik</span>
+              <p>Frontend Developer <br>| Team Leader</p>
+            </div>
+          </div>
+          <a href="#">Follow</a>
+        </div>
+        <div class="card" style="--delay:0;">
+          <div class="content">
+            <div class="img"><img src="images/profile-2.jpeg" alt=""></div>
+            <div class="details">
+              <span class="name">Someone</span>
+              <p>YouTuber & Blogger</p>
+            </div>
+          </div>
+          <a href="#">Follow</a>
+        </div>
+        <div class="card" style="--delay:1;">
+          <div class="content">
+            <div class="img"><img src="images/profile-3.jpeg" alt=""></div>
+            <div class="details">
+              <span class="name">Someone</span>
+              <p>Freelancer & Vlogger</p>
+            </div>
+          </div>
+          <a href="#">Follow</a>
+        </div>
+        <div class="card" style="--delay:2;">
+          <div class="content">
+            <div class="img"><img src="images/profile-4.jpeg" alt=""></div>
+            <div class="details">
+              <span class="name">Someone</span>
+              <p>Backend Developer</p>
+            </div>
+          </div>
+          <a href="#">Follow</a>
+        </div>
+        <div class="card" style="--delay:2;">
+          <div class="content">
+            <div class="img"><img src="images/profile-5.jpeg" alt=""></div>
+            <div class="details">
+              <span class="name">Someone</span>
+              <p>Teacher & Advertiser</p>
+            </div>
+            </div>
+          <a href="#">Follow</a>
+        </div>
+       
+    </div>
+
+
+</div>
+
+  </section>
+
+  <div class="back-button">
+    <button onclick="window.location.href='index.html'">Back to Home</button>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You</title>
+  <link rel="icon" type="image/jpeg" href="images/BM logo.png"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #ff6a00, #ee0979);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      padding: 20px;
+    }
+    
+
+    .popup {
+      background: white;
+      color: #333;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      animation: slideFadeIn 1s ease-out;
+    }
+
+    @keyframes slideFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .popup h1 {
+      font-size: 2rem;
+      color: #ee0979;
+      margin-bottom: 20px;
+    }
+
+    .popup p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .popup button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      color: white;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    .popup button:hover {
+      box-shadow: 0 0 15px rgba(255, 106, 0, 0.6);
+      transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .popup {
+        padding: 30px;
+        max-width: 90%;
+      }
+
+      .popup h1 {
+        font-size: 1.5rem;
+      }
+
+      .popup p {
+        font-size: 0.9rem;
+      }
+
+      .popup button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="popup">
+    <h1>Thank You! 🎉</h1>
+    <p>Your submission has been received. We'll be in touch soon.</p>
+    <button onclick="history.back()">Go Back</button>
+    <!-- <button onclick="window.location.href='index.html'">Back to Home</button> -->
+
+  </div>
+</body>
+</html>
