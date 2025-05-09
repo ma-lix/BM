@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #111;
+  color: #fff;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: crimson;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e60026;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: crimson;
+  font-size: 2.5rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-in;
+}
+
+input[type="text"],
+select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid crimson;
+  background-color: #222;
+  color: #fff;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #fff;
+  box-shadow: 0 0 5px crimson;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  animation: fadeIn 2s ease;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid crimson;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.1);
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 0, 0, 0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  position: relative;
+}
+
+.card-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: crimson;
+  margin-top: 0.5rem;
+  transition: width 0.3s ease;
+}
+
+.card:hover .card-title::after {
+  width: 80px;
+}
+
+a.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+a.card-link:hover {
+  color: crimson;
+}
