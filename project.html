@@ -9,7 +9,7 @@
 
   <link rel="icon" type="image/jpeg" href="images/BM logo.png"/>
   <style>
-    * {
+  * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -147,64 +147,7 @@ a.card-link {
 a.card-link:hover {
   color: crimson;
 }
-
-.theme-switch {
-  position: relative;
-  width: 80px;
-  height: 36px;
-  display: inline-block;
-  background: #d9d9d9;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: inset 0px 3px 10px rgba(0,0,0,0.2), inset 0px -3px 10px rgba(255,255,255,0.2);
-  margin-left: 1rem;
-}
-.theme-switch::after {
-  content: '';
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  background: #fff;
-  border-radius: 50%;
-  top: 3px;
-  left: 3px;
-  transition: 0.4s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-#dark-mode-toggle:checked ~ .theme-switch::after {
-  left: 47px;
-  background: #444;
-}
-#dark-mode-toggle:checked ~ .theme-switch {
-  background: #222;
-}
-body.light-theme {
-  background: #fff;
-  color: #000;
-  
-}
-
-body.light-theme .card {
-  background-color: #f8f8f8;
-  border-color: crimson;
-}
-
-body.light-theme input,
-body.light-theme select {
-  background-color: #eee;
-  color: #111;
-}
-
-body.light-theme .card-title::after {
-  background: crimson;
-
-}
-#dark-mode-toggle {
-  display: none;
-}
-
-
-  </style>
+</style>
 </head>
 <body>
   
@@ -218,9 +161,7 @@ body.light-theme .card-title::after {
     </select>
     
     
-    <input type="checkbox" id="dark-mode-toggle">
-    <label for="dark-mode-toggle" class="theme-switch"></label>
-  </div>
+    
 
 
     
