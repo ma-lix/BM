@@ -1,20 +1,5 @@
-const themeToggleCheckbox = document.getElementById('dark-mode-toggle');
 
-themeToggleCheckbox.addEventListener('change', () => {
-  document.body.classList.toggle('light-theme', !themeToggleCheckbox.checked);
-  localStorage.setItem('theme', themeToggleCheckbox.checked ? 'dark' : 'light');
-});
-
-// On load, apply saved theme
-window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  const isDark = savedTheme === 'dark';
-  document.body.classList.toggle('light-theme', !isDark);
-  themeToggleCheckbox.checked = isDark;
-});
-
-
-    const projects = [
+const projects = [
     { name: "Web Project", image: "images/cube.jpg", date: "2025-02-01", link: "projects/Web Project/index.html" },
     { name: "Range Slider", image: "images/Range Slider.jpg", date: "2025-03-01", link: "projects/Custom Animated Range Slider/index.html" },
     { name: "Analog Clock", image: "images/Analog Clock img.jpg", date: "2025-03-02", link: "projects/A Analog Clock/index.html" },
@@ -92,3 +77,22 @@ window.addEventListener('DOMContentLoaded', () => {
     sort.addEventListener('change', handleSort);
 
     renderProjects();
+
+
+
+
+    const themeToggleCheckbox = document.getElementById('dark-mode-toggle');
+
+themeToggleCheckbox.addEventListener('change', () => {
+  document.body.classList.toggle('light-theme', !themeToggleCheckbox.checked);
+  localStorage.setItem('theme', themeToggleCheckbox.checked ? 'dark' : 'light');
+});
+
+// On load, apply saved theme
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  const isDark = savedTheme === 'dark';
+  document.body.classList.toggle('light-theme', !isDark);
+  themeToggleCheckbox.checked = isDark;
+});
+
