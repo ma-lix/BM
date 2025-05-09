@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Password Show or Hide Toggle | BM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="password" placeholder="Enter Password" required>
+      <span class="show-btn"><i class="fas fa-eye"></i></span>
+    </div>
+    <script>
+      const passField = document.querySelector("input");
+      const showBtn = document.querySelector("span i");
+      showBtn.onclick = (()=>{
+        if(passField.type === "password"){
+          passField.type = "text";
+          showBtn.classList.add("hide-btn");
+        }else{
+          passField.type = "password";
+          showBtn.classList.remove("hide-btn");
+        }
+      });
+    </script>
+  </body>
+</html>

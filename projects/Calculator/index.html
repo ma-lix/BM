@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Calculator By BM</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+    <div class="calculator">
+    <form name="calcForm">
+        <div class="display">
+        <input type="text" name="display" id="display" readonly />
+        </div>
+
+        <div>
+        <input type="button" value="AC" class="btn operator" data-action="clear" />
+        <input type="button" value="Del" class="btn operator" data-action="delete" />
+        <input type="button" value="." class="btn operator" />
+        <input type="button" value="/" class="btn operator" />
+        </div>
+
+        <div>
+        <input type="button" value="7" class="btn" />
+        <input type="button" value="8" class="btn" />
+        <input type="button" value="9" class="btn" />
+        <input type="button" value="*" class="btn operator" />
+        </div>
+
+        <div>
+        <input type="button" value="4" class="btn" />
+        <input type="button" value="5" class="btn" />
+        <input type="button" value="6" class="btn" />
+        <input type="button" value="-" class="btn operator" />
+        </div>
+
+        <div>
+        <input type="button" value="1" class="btn" />
+        <input type="button" value="2" class="btn" />
+        <input type="button" value="3" class="btn" />
+        <input type="button" value="+" class="btn operator" />
+        </div>
+
+        <div>
+        <input type="button" value="00" class="btn" />
+        <input type="button" value="0" class="btn" />
+        <input type="button" value="=" class="btn operator" data-action="calculate" />
+        </div>
+    </form>
+    </div>
+</div>
+
+<!-- Link to the external JS file -->
+<script src="script.js"></script>
+</body>
+</html>

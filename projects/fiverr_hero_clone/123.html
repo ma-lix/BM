@@ -1,0 +1,120 @@
+<!-- HTML -->
+<div class="card-slider-container">
+    <button class="slider-btn left" onclick="slideCards(-1)">&#10094;</button>
+  
+    <div class="card-slider" id="cardSlider">
+      <div class="card"><img src="card photo/Ai development.png" alt=""><p>AI Development</p></div>
+      <div class="card"><img src="card photo/Architecture & interior Design.png" alt=""><p>Architecture & Design</p></div>
+      <div class="card"><img src="card photo/book design.png" alt=""><p>Book Design</p></div>
+      <div class="card"><img src="card photo/Logo Design.png" alt=""><p>Logo Design</p></div>
+      <div class="card"><img src="card photo/seo.png" alt=""><p>SEO</p></div>
+      <div class="card"><img src="card photo/Social Media Marketing.png" alt=""><p>Social Media</p></div>
+      <div class="card"><img src="card photo/software Development.png" alt=""><p>Software Development</p></div>
+      <div class="card"><img src="card photo/UGC video.png" alt=""><p>UGC Video</p></div>
+      <div class="card"><img src="card photo/video Editing.png" alt=""><p>Video Editing</p></div>
+      <div class="card"><img src="card photo/voice Over.png" alt=""><p>Voice Over</p></div>
+      <div class="card"><img src="card photo/web development.png" alt=""><p>Web Development</p></div>
+      <div class="card"><img src="card photo/Website Design.png" alt=""><p>Website Design</p></div>
+    </div>
+  
+    <button class="slider-btn right" onclick="slideCards(1)">&#10095;</button>
+  </div>
+  
+  <!-- CSS -->
+  <style>
+  .card-slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 40px 20px;
+    background: #f9f9f9;
+  }
+  
+  .card-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+  }
+  
+  .card {
+    min-width: 200px;
+    max-width: 200px;
+    background: #fff;
+    border-radius: 16px;
+    scroll-snap-align: start;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    flex-shrink: 0;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  
+  .card p {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+  
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+  
+  .slider-btn.left {
+    left: 10px;
+  }
+  
+  .slider-btn.right {
+    right: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .card {
+      min-width: 160px;
+      max-width: 160px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      min-width: 140px;
+      max-width: 140px;
+    }
+  }
+  </style>
+  
+  <!-- JavaScript for Button Scroll -->
+  <script>
+  function slideCards(direction) {
+    const slider = document.getElementById('cardSlider');
+    const scrollAmount = 220 * direction;
+    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+  </script>
+

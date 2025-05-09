@@ -1,0 +1,97 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Center everything */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.calculator form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.display input {
+    width: 100%;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: right;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+form div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input[type="button"] {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+input[type="button"]:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.operator {
+    background-color: rgba(255, 165, 0, 0.3);
+}
+
+.equal {
+    background-color: rgba(0, 255, 127, 0.3);
+}
+
+.operator:hover {
+    background-color: rgba(255, 165, 0, 0.5);
+}
+
+.equal:hover {
+    background-color: rgba(0, 255, 127, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .calculator form div {
+    flex-wrap: wrap;
+    }
+
+    input[type="button"] {
+    flex: 1 0 22%;
+    margin: 2px;
+    }
+
+    .display input {
+    font-size: 1.5rem;
+    }
+}

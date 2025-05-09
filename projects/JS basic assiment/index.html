@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demon Slayer</title>
+
+</head>
+<body>
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+
+
+.sidebar {
+    width: 230px;
+    height: 95vh;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar div {
+    margin-bottom: 15px;
+  height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: white;
+}
+
+.box-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+}
+
+.box {
+    width: 200px;
+    height: 250px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 100px;
+}
+
+#mainHeading {
+  color: purple;
+  text-align: center;
+}
+
+#mainPara {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+
+
+
+</style>
+
+
+
+<div class="sidebar">
+    <div>
+      <input type="text" id="bgColorInput" placeholder="Background Color">
+      <button onclick="changeBgColor()">click </button>
+    </div>
+
+    <div>
+      <input type="text" id="headingTextInput" placeholder="Heading Text">
+      <button onclick="changeHeading()">click</button>
+    </div>
+
+    <div>
+      <input type="text" id="textAlignInput" placeholder="Text-Align Heading">
+      <button onclick="changeTextAlign()">click</button>
+    </div>
+    
+    <div>
+      <input type="text" id="paraHeightInput" placeholder="Paragraph Height">
+      <button onclick="changeParaHeight()">click</button>
+    </div>
+
+    <div>
+      <input type="text" id="paraWidthInput" placeholder="Paragraph Width">
+      <button onclick="changeParaWidth()">click</button>
+    </div>
+
+    <div>
+      <input type="text" id="flexDirectionInput" placeholder="Flex Direction">
+      <button onclick="changeFlexDirection()">click</button>
+    </div>
+
+    <div>
+      <input type="text" id="boxGapInput" placeholder="Box Gap">
+      <button onclick="changeBoxGap()">click</button>
+    </div>
+
+    <div>
+      <input type="text" id="justifyContentInput" placeholder="Justify Content">
+      <button onclick="changeJustifyContent()">click</button>
+    </div>
+
+
+
+</div>
+
+
+
+  <div class="main" id="mainArea">
+    <h1 id="mainHeading"> Demon Slayer</h1>
+    <p id="mainPara">
+      Demon Slayer tells the story of Tanjiro Kamado, a young boy whose family is murdered by demons, and his sister Nezuko, who is turned into a demon.<br>
+      Driven by a desire for revenge and to cure Nezuko, Tanjiro joins the Demon Slayer Corps, an underground organization dedicated to protecting humans from demons.<br>
+      The series follows Tanjiro's journey as he trains and battles demons,<br>
+      facing immense challenges and discovering his own unique abilities along the way.<br>
+      The story explores themes of family, friendship, and the struggle between good and evil.<br>
+      With stunning animation and compelling characters, Demon Slayer has become a global phenomenon,<br>
+      captivating audiences with its emotional depth and breathtaking action sequences.<br>
+    </p>
+
+    <div class="box-container" id="boxContainer">
+      <!-- <div class="box">
+      <img src="Demon Slayer  (6).jpg" alt="Demon Slayer" width="200" height="250">
+      </div> -->
+     
+      <div class="box">
+        <img src="Demon Slayer  (1).jpg" alt="Demon Slayer" width="200" height="250">
+      </div>
+      <div class="box">
+        <img src="Demon Slayer  (5).jpg" alt="Demon Slayer" width="200" height="250">
+      </div>
+      <div class="box">
+        <img src="Demon Slayer  (2).jpg" alt="Demon Slayer" width="200" height="250">
+      </div>
+      <div class="box">
+        <img src="Demon Slayer  (3).jpg" alt="Demon Slayer" width="200" height="250">
+      </div>
+     
+      
+    </div>
+  </div>
+
+  <script src="main01.js" ></script>
+
+</body>
+</html>

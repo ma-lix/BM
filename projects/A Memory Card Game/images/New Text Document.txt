@@ -1,0 +1,1 @@
+In demo 2, everything is the same as in demo 1, but there is a time limit of 30 seconds, and you have to find the pair of cards in this given time. I hope you liked this game. If you liked it. 

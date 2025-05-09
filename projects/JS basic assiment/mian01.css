@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar div {
+    margin-bottom: 15px;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.box-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: #add8e6;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 100px;
+}
