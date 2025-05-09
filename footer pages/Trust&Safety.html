@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trust & Safety</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    ::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: crimson;
+}
+
+    .trust-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .trust-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .trust-header h2 {
+      font-size: 2.8rem;
+      color: crimson;
+      position: relative;
+    }
+
+    .trust-header h2::after {
+      content: '';
+      display: block;
+      height: 4px;
+      width: 80px;
+      background-color: crimson;
+      margin: 0.5rem auto 0;
+      transition: width 0.3s ease;
+    }
+
+    .trust-header h2:hover::after {
+      width: 120px;
+    }
+
+    .trust-header p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .trust-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(220, 20, 60, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .trust-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+    }
+
+    .trust-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .trust-card h3 {
+      color: #fff;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .trust-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .trust-header h2 {
+        font-size: 2rem;
+      }
+
+      .trust-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="trust-container">
+    <div class="trust-header">
+      <h2>Trust & Safety</h2>
+      <p>Your confidence means everything. Here's how I ensure your safety and trust.</p>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-card">
+        <span class="trust-icon">🔒</span>
+        <h3>Secure Communication</h3>
+        <p>All contact and submissions are encrypted and private. I never share your information.</p>
+      </div>
+
+      <div class="trust-card">
+        <span class="trust-icon">📁</span>
+        <h3>Confidential Projects</h3>
+        <p>NDAs welcomed. Your project ideas, data, and assets are handled with full confidentiality.</p>
+      </div>
+
+      <div class="trust-card">
+        <span class="trust-icon">✅</span>
+        <h3>Trusted by Clients</h3>
+        <p>Over X satisfied clients with a proven record of reliability, transparency, and deadlines met.</p>
+      </div>
+
+      <div class="trust-card">
+        <span class="trust-icon">🤝</span>
+        <h3>Ethical Standards</h3>
+        <p>I follow ethical practices and clear communication in all professional relationships.</p>
+      </div>
+
+      <div class="trust-card">
+        <span class="trust-icon">🧠</span>
+        <h3>Transparency</h3>
+        <p>I maintain open communication throughout every stage of the project — no surprises, just clarity.</p>
+      </div>
+
+      
+      <div class="trust-card">
+        <span class="trust-icon">📜</span>
+        <h3>Clear Agreements</h3>
+        <p>All services are backed by simple, clear terms and mutual understanding before work begins.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

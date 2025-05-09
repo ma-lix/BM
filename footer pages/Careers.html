@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers</title>
+  <link rel="icon" type="image/jpeg" href="BM logo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #111;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .careers-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #1c1c1c, #111);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    }
+
+    .careers-title {
+      text-align: center;
+      font-size: 2.8rem;
+      color: crimson;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .careers-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: crimson;
+      margin: 0.5rem auto 0;
+      transition: width 0.4s ease;
+    }
+
+    .careers-title:hover::after {
+      width: 120px;
+    }
+
+    .career-item {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-left: 5px solid crimson;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .career-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+    }
+
+    .career-role {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .career-period {
+      font-size: 0.95rem;
+      color: #aaa;
+      margin-bottom: 0.5rem;
+    }
+
+    .career-desc {
+      font-size: 1.05rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    /* Fade animation on load */
+    .career-item {
+      animation: fadeInUp 0.6s ease both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .careers-title {
+        font-size: 2rem;
+      }
+
+      .career-role {
+        font-size: 1.2rem;
+      }
+
+      .career-desc {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="careers-section">
+    <h2 class="careers-title">Career Journey</h2>
+
+    <div class="career-item">
+      <h3 class="career-role">Frontend Developer</h3>
+      <p class="career-period">2023 – Present | Freelance</p>
+      <p class="career-desc">
+        Working with global clients to build elegant, responsive websites using HTML, CSS, JavaScript, and modern frameworks like React. Focused on performance, accessibility, and pixel-perfect design.
+      </p>
+    </div>
+
+    <div class="career-item">
+      <h3 class="career-role">UI/UX Designer</h3>
+      <p class="career-period">2021 – 2023 | Studio Red</p>
+      <p class="career-desc">
+        Led UI/UX efforts for web and mobile apps. Translated user needs into clear wireframes, prototypes, and polished designs with Figma and Adobe XD. Collaborated with developers for handoff.
+      </p>
+    </div>
+
+    <div class="career-item">
+      <h3 class="career-role">Junior Web Developer</h3>
+      <p class="career-period">2019 – 2021 | Pixelcraft</p>
+      <p class="career-desc">
+        Maintained and enhanced websites for small businesses. Learned best practices in HTML, CSS, and jQuery while supporting the design team in frontend tasks.
+      </p>
+    </div>
+
+  </section>
+
+</body>
+</html>

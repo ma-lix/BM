@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Mission</title>
+  <link rel="icon" type="image/jpeg" href="BM logo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #111;
+      color: #fff;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    .mission-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      background: linear-gradient(145deg, #1a1a1a, #111);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mission-section:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+    }
+
+    .mission-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: crimson;
+      animation: fadeIn 1.5s ease;
+      position: relative;
+    }
+
+    .mission-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: crimson;
+      margin: 0.5rem auto 0;
+      transition: width 0.3s ease;
+    }
+
+    .mission-title:hover::after {
+      width: 100px;
+    }
+
+    .mission-content {
+      font-size: 1.1rem;
+      text-align: center;
+      animation: slideUp 1s ease;
+      color: #ddd;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .mission-title {
+        font-size: 2rem;
+      }
+
+      .mission-content {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="mission-section">
+    <h2 class="mission-title">My Mission</h2>
+    <p class="mission-content">
+      My mission is to design and build immersive, meaningful digital experiences that empower users and elevate brands. I strive to combine creativity with clean, efficient code — always pushing the boundaries of what’s possible on the web. Every pixel and interaction matters, and I am committed to making each project not only beautiful, but purposeful.
+    </p>
+  </section>
+
+</body>
+</html>

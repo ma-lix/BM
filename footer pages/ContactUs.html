@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link rel="icon" type="image/jpeg" href="BM logo.png" />
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #111;
+      color: #fff;
+      padding: 2rem;
+    }
+    ::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: crimson;
+}
+    .contact-container {
+      max-width: 1100px;
+      margin: auto;
+    }
+    .contact-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .contact-header h2 {
+      font-size: 2.5rem;
+      color: crimson;
+    }
+    .contact-header p {
+      color: #ccc;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .contact-form {
+      flex: 1 1 60%;
+      background-color: #1a1a1a;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(220, 20, 60, 0.2);
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #eee;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: #fff;
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .contact-form button {
+      background-color: crimson;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .contact-form button:hover {
+      background-color: #e60026;
+      transform: scale(1.05);
+    }
+    .contact-info {
+      flex: 1 1 35%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .info-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px crimson;
+    }
+    .info-card h4 {
+      margin-bottom: 0.5rem;
+      color: crimson;
+    }
+    .info-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+    #response-message {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: lime;
+    }
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+      .contact-form,
+      .contact-info {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <div class="contact-header">
+      <h2>Contact Me</h2>
+      <p>Have a project in mind? Want to collaborate? Let’s get in touch.</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <!-- Contact Form -->
+      <form class="contact-form" id="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+        <p id="response-message"></p>
+      </form>
+
+      <div class="contact-info">
+        <div class="info-card">
+          <h4>Email</h4>
+          <p>malix204@gmail.com</p>
+        </div>
+        <div class="info-card">
+          <h4>Phone</h4>
+          <p>+923188737575</p>
+        </div>
+        <div class="info-card">
+          <h4>Location</h4>
+          <p>Faisalabad, Pakistan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const responseMsg = document.getElementById('response-message');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch('https://script.google.com/macros/s/AKfycbyd7LfF-mcgXw5lxcuMj7Bw8mcatSAcymE2u2Y0O_tKZfVB2R-hBsTqSulqeMwWeGcj/exec', {  // 👈 Replace with your Google Apps Script Web App URL
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(text => {
+        responseMsg.style.color = "lime";
+        responseMsg.textContent = "✅ Message sent successfully!";
+        form.reset();
+      })
+      .catch(error => {
+        console.error(error);
+        responseMsg.style.color = "crimson";
+        responseMsg.textContent = "❌ Error sending message. Try again later.";
+      });
+    });
+  </script>
+
+</body>
+</html>

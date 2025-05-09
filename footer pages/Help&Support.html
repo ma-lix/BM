@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help & Support</title>
+  <link rel="icon" type="image/jpeg" href="BM logo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+      color: #fff;
+      padding: 2rem;
+    }
+    ::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: crimson;
+}
+    .support-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 20px;
+    }
+
+    .support-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .support-header h2 {
+      font-size: 2.8rem;
+      color: crimson;
+      position: relative;
+    }
+
+    .support-header h2::after {
+      content: '';
+      display: block;
+      height: 4px;
+      width: 80px;
+      background-color: crimson;
+      margin: 0.5rem auto 0;
+      transition: width 0.3s ease;
+    }
+
+    .support-header h2:hover::after {
+      width: 120px;
+    }
+
+    .support-header p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .support-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(220, 20, 60, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+    }
+
+    .support-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 0 30px rgba(220, 20, 60, 0.5);
+    }
+
+    .support-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+      animation: popUp 0.8s ease;
+    }
+    
+
+    @keyframes popUp {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .support-card h3 {
+      color: #fff;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .support-card p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .support-header h2 {
+        font-size: 2rem;
+      }
+
+      .support-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="support-container">
+    <div class="support-header">
+      <h2>Help & Support</h2>
+      <p>Need assistance? Choose how you'd like to reach out — I'm here to help!</p>
+    </div>
+
+    <div class="support-grid">
+      <div class="support-card">
+        <span class="support-icon">📧</span>
+        <h3>Email Me</h3>
+        <div style="margin-top: 2rem; text-align: center; font-family: 'Roboto', sans-serif;">
+          <p style="font-size: 1.1rem; color: #ccc;">
+            Quick questions or inquiries? <br>
+            Reach me at:
+          </p>
+          <a href="mailto:malix204@gmail.com" style="font-size: 1.3rem; color: crimson; text-decoration: none; font-weight: bold;">
+            malix204@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="support-card">
+        <span class="support-icon">💬</span>
+        <h3>Live Chat</h3>
+        <p>If I'm online, let's chat instantly via the widget in the corner of the screen.</p>
+      </div>
+
+      <div class="support-card">
+        <span class="support-icon">❓</span>
+        <h3>FAQs</h3>
+        <p>Browse through the most common questions clients ask about my services.</p>
+      </div>
+
+      <div class="support-card">
+        <span class="support-icon">🗂️</span>
+        <h3>Documentation</h3>
+        <p>Need help using my tools or products? Visit the official docs and guides.</p>
+      </div>
+      
+      <div class="support-card">
+        <span class="support-icon">📅</span>
+        <h3>Schedule a Call</h3>
+        <p>Want to talk directly? Book a call with me at your convenience using Calendly or Zoom.</p>
+      </div>
+    
+      
+      <div class="support-card">
+        <span class="support-icon">📱</span>
+        <h3>Social Support</h3>
+        <p>DM me on Instagram or connect via LinkedIn — I’m happy to help there too!</p>
+      </div>
+    </div>
+
+
+    </div>
+  </div>
+
+</body>
+</html>
