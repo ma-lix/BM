@@ -1,13 +1,13 @@
 
 const projects = [
-    { name: "Web Project", image: "images/cube.jpg", date: "2025-02-01", link: "projects/Web Project/index.html" },
-    { name: "Range Slider", image: "images/Range Slider.jpg", date: "2025-03-01", link: "projects/Custom Animated Range Slider/index.html" },
-    { name: "Analog Clock", image: "images/Analog Clock img.jpg", date: "2025-03-02", link: "projects/A Analog Clock/index.html" },
-    { name: "Glowing Bulb Effect", image: "images/Glowing Bulb img.jpg", date: "2025-03-02", link: "projects/Glowing Bulb Effect/index.html" },
-    { name: "Digital Clock", image: "images/Digital Clock img.jpg", date: "2025-03-03", link: "projects/Digital Clock with Colorful Glowing Effect/index.html" },
-    { name: "Flying Brid Animation", image: "images/br.jpg", date: "2025-03-18", link: "projects/Flying Brid Animation/index.html" },
-    { name: "JS basic assignment", image: "images/js.jpg", date: "2025-03-17", link: "projects/JS basic assiment/index.html" },
-    { name: "Alert Notification", image: "images/Alert Notification.jpg", date: "2025-03-18", link: "projects/Custom Warning Alert Notification/index.html" },
+      { name: "Web Project", image: "images/cube.jpg", date: "2025-02-01", link: "projects/Web Project/index.html" },
+      { name: "Range Slider", image: "images/Range Slider.jpg", date: "2025-03-01", link: "projects/Custom Animated Range Slider/index.html" },
+      { name: "Analog Clock", image: "images/Analog Clock img.jpg", date: "2025-03-02", link: "projects/A Analog Clock/index.html" },
+      { name: "Glowing Bulb Effect", image: "images/Glowing Bulb img.jpg", date: "2025-03-02", link: "projects/Glowing Bulb Effect/index.html" },
+      { name: "Digital Clock", image: "images/Digital Clock img.jpg", date: "2025-03-03", link: "projects/Digital Clock with Colorful Glowing Effect/index.html" },
+      { name: "Flying Brid Animation", image: "images/br.jpg", date: "2025-03-18", link: "projects/Flying Brid Animation/index.html" },
+      { name: "JS basic assignment", image: "images/js.jpg", date: "2025-03-17", link: "projects/JS basic assiment/index.html" },
+      { name: "Alert Notification", image: "images/Alert Notification.jpg", date: "2025-03-18", link: "projects/Custom Warning Alert Notification/index.html" },
       { name: "Portfolio 1", image: "images/green.jpg", date: "2025-04-01", link: "projects/portfolio1/index.html" },
       { name: "Portfolio 2", image: "images/p2.jpg", date: "2025-04-02", link: "projects/portfolio2/index.html" },
       { name: "Portfolio 3", image: "images/girlcode.jpg", date: "2025-04-03", link: "projects/portfolio3/index.html" },
@@ -38,65 +38,57 @@ const projects = [
       ];
 
     const grid = document.getElementById('projectGrid');
-    const search = document.getElementById('search');
-    const sort = document.getElementById('sort');
+const search = document.getElementById('search');
+const sort = document.getElementById('sort');
 
-    function renderProjects(filtered = projects) {
-      grid.innerHTML = '';
-      filtered.forEach(p => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-            <a href="${p.link}" target="_blank" class="card-link">
-            <picture>
-            <source srcset="${p.image.replace(/\.jpg$/, '.webp')}" type="image/webp">
-            <img src="${p.image}" alt="${p.name}" loading="lazy">
-            </picture>
-            <div class="card-content">
-            <div class="card-title">${p.name}</div>
-    </div>
-  </a>
-`;
+function renderProjects(filtered = projects) {
+  grid.innerHTML = '';
+  filtered.forEach(p => {
+    const webpSrc = p.image
+      .replace('.jpg', '.webp')
+      .replace('.jpeg', '.webp')
+      .replace('.png', '.webp');
 
-        grid.appendChild(card);
-      });
-    }
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <a href="${p.link}" target="_blank" class="card-link">
+        <picture>
+          <source srcset="${webpSrc}" type="image/webp">
+          <img src="${p.image}" alt="${p.name}" loading="lazy" width="300" height="200">
+        </picture>
+        <div class="card-content">
+          <div class="card-title">${p.name}</div>
+        </div>
+      </a>
+    `;
+    grid.appendChild(card);
+  });
+}
 
-    function handleSearch() {
-      const query = search.value.toLowerCase();
-      const filtered = projects.filter(p => p.name.toLowerCase().includes(query));
-      renderProjects(filtered);
-    }
+function handleSearch() {
+  const query = search.value.toLowerCase();
+  const filtered = projects.filter(p => p.name.toLowerCase().includes(query));
+  renderProjects(filtered);
+}
 
-    function handleSort() {
-      const option = sort.value;
-      const sorted = [...projects].sort((a, b) => {
-        if (option === 'name') return a.name.localeCompare(b.name);
-        if (option === 'date') return new Date(b.date) - new Date(a.date);
-      });
-      renderProjects(sorted);
-    }
+function handleSort() {
+  const option = sort.value;
+  const sorted = [...projects].sort((a, b) => {
+    if (option === 'name') return a.name.localeCompare(b.name);
+    if (option === 'date') return new Date(b.date) - new Date(a.date);
+  });
+  renderProjects(sorted);
+}
 
-    search.addEventListener('input', handleSearch);
-    sort.addEventListener('change', handleSort);
+search.addEventListener('input', handleSearch);
+sort.addEventListener('change', handleSort);
 
-    renderProjects();
+window.onload = () => {
+  renderProjects();
+};
 
 
 
 
-    const themeToggleCheckbox = document.getElementById('dark-mode-toggle');
-
-themeToggleCheckbox.addEventListener('change', () => {
-  document.body.classList.toggle('light-theme', !themeToggleCheckbox.checked);
-  localStorage.setItem('theme', themeToggleCheckbox.checked ? 'dark' : 'light');
-});
-
-// On load, apply saved theme
-window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  const isDark = savedTheme === 'dark';
-  document.body.classList.toggle('light-theme', !isDark);
-  themeToggleCheckbox.checked = isDark;
-});
 

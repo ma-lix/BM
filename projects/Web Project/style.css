@@ -1,0 +1,536 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.head_main {
+    background-color: #393d40;
+}
+
+
+.hero_image{
+background-image: url(https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+height: 100vh; 
+width: 100%;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+
+
+body{
+    margin: 0;
+}
+
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #414344;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    padding: 10px 40px 10px 70px;
+    border: 1px solid #000;
+    border-left: none;
+    border-right: none;
+}
+
+.nav .logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    overflow: hidden;   
+
+
+
+
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav_main ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 23px;
+justify-content: center;
+
+
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+.nav_links a:hover {
+    color: rgb(10, 10, 10);
+}
+
+
+.get_start_btn {
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: #124983;
+    color: white;
+}
+
+nav ul .search-icon {
+height: 40px;
+width: 200px;
+background-color: #f2f2f2;
+border-radius: 5px;
+    display: flex;
+}
+
+nav ul .search-icon input {
+    height: 100%;
+    width: 165px;
+    border: none ;
+    outline: none;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #000;
+    border-radius: 5px 0 5px 0;
+}
+
+
+nav ul .search-icon .icon {
+    height: 100%;
+    width: 40px;
+    line-height: 40px;
+    text-align: center; 
+    border: 1px solid #cccccc;
+    background-color: #000;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+nav ul .search-icon .icon:hover {
+    background: #e6e6e6; ;
+}
+
+
+nav ul .search-icon .icon span {
+    color: #222222;
+    font-size: 18px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*.drop_down_main {
+    position: relative;
+}
+.drop_down {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    background-color: rgba(60, 57, 57, 0.8);
+    display: none;
+}
+
+.drop_down ul {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 12px;
+    font-size: 18px;
+    color: #333;
+}
+
+.drop_down ul li {
+    padding: 8px 12px;
+} */
+
+
+
+
+
+
+.order_btn {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: white;
+    background-color: #1156d7;
+    letter-spacing: 2px;
+    font-size: 16px;
+transition: 1s;
+}
+
+
+
+
+.order_btn:hover {
+    color: #f5560c;
+
+}
+
+.order_btn span{
+    display: block;
+position: absolute;
+height: 100%;
+background-color: #2897ff;
+
+}
+
+
+
+
+.order_btn, .learn_btn{
+
+    margin-right:40px ;
+border-radius: 45px;
+
+}
+
+
+
+
+.learn_btn{
+    position: relative;
+    right: 18px;
+    bottom: 0px;
+    border:none;
+    box-shadow: none;
+    width: 135px;
+    height: 5px;
+    line-height: 42px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+  }
+  .learn_btn span{
+    background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    display: block;
+    position: absolute;
+    width: 143px;
+    height: 50px;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    border-radius: 5px;
+    margin:0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+  .learn_btn span:nth-child(1) {
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+  }
+  .learn_btn span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+  }
+
+  .learn_btn:hover span:nth-child(1) {
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  .learn_btn:hover span:nth-child(2) {
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+   color: transparent;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 3D Block Design Logo with HTML & Css  */
+
+
+.hero{
+display: flex;
+width: 300px;
+height: 300px;
+flex-wrap: wrap;
+margin: 150px auto;
+
+}    
+
+
+.small_img{
+flex-basis: 100px;
+cursor: pointer;
+transition: 2s;
+box-shadow: 27px 41px 13 4px rgba(0, 0, 0, 0.10);
+
+}
+
+
+.small_img img{
+width: 100%;
+height: 100%;
+position: relative;
+}
+
+
+.small_img::after{
+content: "";
+width: 100px;
+height: 30px;
+position: absolute;
+bottom: -29px;
+left: 7px;
+background: #4b4c4c;
+transform: skewX(26deg);
+
+
+}
+
+.small_img::before{
+content: "";
+width:15px;
+height:99px;
+position: absolute;
+right: -14px;
+top: 18px;
+background: #8c8f8f;
+transform: skewY(65deg);
+
+
+
+}
+
+
+
+.hero:hover .small_img:nth-child(1){
+transform: translate(60px, 230px) rotate(360deg);
+
+
+}
+
+
+.hero:hover .small_img:nth-child(2){
+transform: translate(-260px, -150px) rotate(360deg);
+
+
+}
+
+.hero:hover .small_img:nth-child(3){
+transform: translate(91px, 295px) rotate(360deg);
+
+
+}
+
+.hero:hover .small_img:nth-child(4){
+transform: translate(440px, -220px) rotate(360deg);
+
+
+}
+
+.hero:hover .small_img:nth-child(5){
+transform: translate(100px, -120px) rotate(360deg);
+
+
+}
+
+.hero:hover .small_img:nth-child(6){
+transform: translate(-370px, 320px) rotate(360deg);
+
+
+}
+
+.hero:hover .small_img:nth-child(7){
+transform: translate(0, -480px) rotate(360deg);
+
+
+}
+
+.hero:hover .small_img:nth-child(8){
+transform: translate(-280px, -40px) rotate(360deg);
+
+
+}
+
+.hero:hover .small_img:nth-child(9){
+transform: translate(400px, -120px) rotate(360deg);
+
+
+}
+
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    gap: 3em;
+    flex-grow: 1;
+padding: 0 40px;
+}
+
+.div1, .div2, .div3{
+    height: 70%;
+    width: 50%;
+    background-color: grey;
+    box-shadow: 5px 5px 25px #0000005f;
+    margin: 20px;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.div1::before, .div2::before, .div3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00e7);
+    background-size: 400%;
+    z-index: -1;
+    border-radius: 10px;
+    animation: animate 10s linear infinite;
+}
+
+.div1:hover, .div2:hover, .div3:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 1s, box-shadow 1s; 
+    transform: none;
+}
+
+.read-btn{
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: #124983;
+    color: white;
+    position: relative;
+    top: 30%;
+    left: 3px;
+
+}
+
+/* .div1, .div2, .div3{
+
+
+    max-width: 80%;
+    padding: 30px;
+    border-radius: 10px;
+} */
+
+
+
+@media(min-width:230px) and (max-width:600px){
+
+.container div{
+    background-color: red;
+}
+
+
+}
+
+
+
